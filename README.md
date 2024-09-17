@@ -24,9 +24,11 @@ To get started, we'll use [Replit](https://replit.com/), a cloud-based coding pl
 ### Steps to Set Up Replit
 
 1. **Create an Account:**
+
    - Go to [Replit Sign Up](https://replit.com/signup) and create a free account.
 
 2. **Create a New Repl:**
+
    - Click on the **"+"** button and select **"JavaScript"** as your language.
 
 3. **Familiarize Yourself with the Interface:**
@@ -206,6 +208,189 @@ let alice = new Person("Alice", 25);
 alice.greet(); // Output: Hello, my name is Alice
 ```
 
+## TypeScript Fundamentals
+
+### TypeScript Variables and Data Types
+
+#### TypeScript Variables
+
+Variables store data values. In TypeScript, you can declare variables using `var`, `let`, or `const`.
+
+- `var` is function-scoped or globally scoped.
+- `let` and `const` are block-scoped. `const` is used for constants.
+
+**Example:**
+
+```typescript
+var name: string = "Alice";
+let age: number = 25;
+const pi: number = 3.1416;
+```
+
+#### TypeScript Data Types
+
+1. **Number**: Represents both integer and floating-point numbers.
+
+   ```typescript
+   let count: number = 10;
+   let price: number = 19.99;
+   ```
+
+2. **String**: Textual data enclosed in quotes.
+
+   ```typescript
+   let greeting: string = "Hello, world!";
+   ```
+
+3. **Boolean**: Represents `true` or `false`.
+
+   ```typescript
+   let isStudent: boolean = true;
+   ```
+
+4. **Null**: Represents an intentional absence of value.
+
+   ```typescript
+   let emptyValue: unknown | null = null;
+   ```
+
+5. **Undefined**: Variable declared but not assigned a value.
+
+   ```typescript
+   let notAssigned: unknown;
+   ```
+
+6. **Object**: Complex data structures.
+
+   ```typescript
+   interface IPerson {
+     name: string;
+     age: number;
+   }
+
+   let person: IPerson = { name: "Bob", age: 30 };
+   ```
+
+7. **Symbol**: Unique and immutable identifiers (advanced).
+
+### TypeScript Control Structures
+
+Control structures determine the flow of execution in your code.
+
+#### TypeScript Conditional Statements
+
+**`if...else` Statement**
+
+```typescript
+let score: number = 85;
+
+if (score >= 90) {
+  console.log("A grade");
+} else if (score >= 80) {
+  console.log("B grade");
+} else {
+  console.log("C grade");
+}
+```
+
+**`switch` Statement**
+
+```typescript
+let day: number = 2;
+
+switch (day) {
+  case 1:
+    console.log("Monday");
+    break;
+  case 2:
+    console.log("Tuesday");
+    break;
+  default:
+    console.log("Another day");
+}
+```
+
+#### TypeScript Loops
+
+**`for` Loop**
+
+```typescript
+for (let i = 0; i < 5; i++) {
+  console.log("Iteration " + i);
+}
+```
+
+**`while` Loop**
+
+```typescript
+let i: number = 0;
+
+while (i < 5) {
+  console.log("Iteration " + i);
+  i++;
+}
+```
+
+### TypeScript Functions
+
+Functions are reusable blocks of code.
+
+#### TypeScript Function Declaration
+
+```typescript
+function add(a: number, b: number): number {
+  return a + b;
+}
+```
+
+#### TypeScript Function Expression
+
+```typescript
+const multiply = function (a: number, b: number): number {
+  return a * b;
+};
+```
+
+#### TypeScript Arrow Functions
+
+```typescript
+const subtract = (a: number, b: number): number => a - b;
+```
+
+### TypeScript Classes
+
+Classes are blueprints for creating objects.
+
+#### TypeScript Creating a Class
+
+```typescript
+interface IPerson {
+  name: string;
+  age: number;
+}
+
+class Person implements IPerson {
+  age: number;
+  name: string;
+
+  constructor({ age, name }: IPerson) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    console.log("Hello, my name is " + this.name);
+  }
+}
+```
+
+#### TypeScript Using a Class
+
+```typescript
+let alice: Person = new Person({ name: "Alice", age: 25 });
+alice.greet(); // Output: Hello, my name is Alice
+```
+
 ---
 
 ## Building a Simple Project
@@ -292,7 +477,7 @@ displayTasks();
 
 **Expected Output:**
 
-```
+```bash
 Added task: "Learn JavaScript fundamentals"
 Added task: "Build a simple project"
 To-Do List:
@@ -313,6 +498,7 @@ TypeScript is a superset of JavaScript that adds static typing, which can help p
 ### Setting Up TypeScript on Replit
 
 1. **Create a New Repl:**
+
    - Click on the **"+"** button and select **"TypeScript"** as your language.
 
 2. **Familiarize Yourself with the Interface:**
@@ -401,7 +587,7 @@ displayTasks();
 
 **Expected Output:**
 
-```
+```bash
 Added task: "Learn TypeScript"
 Added task: "Add types to the project"
 To-Do List:
